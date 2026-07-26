@@ -1,1 +1,6 @@
 .claude/
+
+# Persoonlijke context — groeit door gebruik, hoort niet in git (zie planning/pa-agent-plan.md §6)
+personal/
+memory/
+config/
