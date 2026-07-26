@@ -4,3 +4,6 @@
 personal/
 memory/
 config/
+
+# Projectplan — documenteert deze specifieke build, geen onderdeel van de herbruikbare agent-laag (zie §6)
+planning/pa-agent-plan.md
