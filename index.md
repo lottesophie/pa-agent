@@ -1,5 +1,5 @@
 # index.md — wegwijzer
 
 - Session start: load `CLAUDE.md`.
-- (Later, once populated) preference questions → `personal/preferences.md`.
+- Preference questions → `personal/preferences.md` (fills in over time, not pre-populated).
 - (Later stories) Daily Start → also `memory/handoff.md`, `memory/open-loops.md`.
