@@ -30,9 +30,10 @@ Check for, and report only what is actually found:
 
 - Overfull days: back-to-back meetings without breathing room (default threshold: no gap of ≥15 min between consecutive meetings for 3+ hours).
 - Missing lunch/break window (default: no free slot of ≥30 min between 12:00–14:00).
-- Travel time that is missing or implausible between different locations.
+- Travel time: this is **standing context for every event with a physical location, not just a conflict check**. You always have to get there from wherever you currently are — a big gap before an event doesn't make the question irrelevant, it just makes the answer "comfortable" instead of "tight". For every physical-location event, briefly state whether travel is accounted for (an explicit travel/buffer block exists), looks comfortable (large gap to the previous location-bearing commitment), or is tight/unaccounted (short or no gap after another physical location, or the preceding event's location is unknown). There is no maps/travel-time capability connected, so never invent a duration or distance — only reason about gaps between calendar entries.
+- **Don't assume "has a conferenceUrl" means "no travel needed".** If the title suggests a physical activity (coffee, lunch, dinner, drinks, walk, etc.) and there is no explicit location, a conferenceUrl does not resolve the ambiguity — flag it explicitly ("is dit online of in persoon?") instead of silently treating it as online and skipping the travel-time check.
 - Double bookings and conflicts.
-- Events without a clear purpose (no title, no description).
+- Events without a clear purpose: check **every event**, not only the obviously empty ones. A title alone is not automatically clear — judge whether a reader with no other context could tell what the appointment is for from title + location + description together. If not, say so, even if a title is present.
 - Unanswered invitations that require a response.
 
 Overlap note: this skill **signals** hygiene issues (missing travel time, bad titles); fixing them belongs to a future agenda-hygiene skill, not here.
@@ -40,7 +41,7 @@ Overlap note: this skill **signals** hygiene issues (missing travel time, bad ti
 ## Step 4 — Prioritize and interpret
 
 - Mark what is important. Default signals: explicit markers, one-on-ones, external parties, one-off over recurring. Personal priority rules override defaults (preference: priority rules).
-- Note what needs preparation before it starts.
+- Note, per day, what needs preparation before it starts — every event with an external party, no prior context, or an attachment/description worth reading is a candidate. State only that prep may be needed and why (e.g. "externe partij, geen eerdere context bekend") — never invent what the preparation should contain. What the prep actually *is* (mail thread, meeting history) belongs to a future "briefings voorbereiden" skill, not here — this skill only flags the need.
 - Changes since the previous briefing (new/moved/cancelled): only report if you can actually determine this. There is no memory between sessions yet — if unknown, say nothing about changes rather than guessing.
 
 ## Step 5 — Propose, never act
