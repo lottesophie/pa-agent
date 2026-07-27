@@ -1,4 +1,6 @@
-.claude/
+# Claude Code lokale state blijft privé; skills zijn de uitzondering — die zijn onderdeel van de productiseerbare agent-laag (zie planning/pa-agent-plan.md §6)
+.claude/*
+!.claude/skills/
 
 # Persoonlijke context — groeit door gebruik, hoort niet in git (zie planning/pa-agent-plan.md §6)
 personal/
