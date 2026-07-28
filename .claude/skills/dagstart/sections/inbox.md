@@ -1,14 +1,14 @@
-# Inbox slot — nog niet gekoppeld
+# Inbox slot — actief
 
-Unlocked by: **C3** (triage in de Dagstart — the integration story). The underlying capability and judgment logic (C1 mail lezen, C2 email-triage) already exist and are in use standalone; what's missing is specifically the Dagstart-integration story itself, not a data or judgment gap.
+Status: already real (story C3). This slot does **not** get its own sub-skill logic — it delegates entirely to the existing `email-triage` skill (`.claude/skills/email-triage/SKILL.md`, story C2).
 
-## Intended scope (from the source brainstorm, for when C3 lands)
+Step 2 of `dagstart`'s `SKILL.md` simply invokes `email-triage` via the Skill tool and takes its output as the Inbox slot content, unmodified. No classification logic is duplicated here.
 
-- What came in since last night.
-- Classify: urgent / vandaag / kan wachten / zelf afhandelen — this is `email-triage`'s own output shape, this slot should not invent a different one.
-- Link inbox items to today's agenda items where relevant (e.g. a mail from someone in a 14:00 meeting).
-- Propose draft replies — this is **C5** (concepten opstellen), a separate, later capability (level 2, requires D1's write-blockade first). Do not attempt draft proposals in this slot until C5 exists; a Dagstart briefing referencing a mail is fine, ghost-writing a reply is not.
+Functional scope this slot already covers (from C2, do not redesign): action-required/for-info/ignorable/spam-suspected classification, per-message content summary, urgency signals, phishing/spoofing safety check, unsubscribe-suggestion for recurring automated senders.
 
-## Not in this draft
+If the combined Agenda + Inbox output gets too long, shorten `email-triage`'s per-message summaries first (one line each) rather than cutting agenda content or dropping a message — see `dagstart`'s `SKILL.md` Step 3.
 
-Everything — this is a placeholder until C3 exists.
+## Not in this slot
+
+- Draft replies — that's **C5** (concepten opstellen), separate, later, D1-gated. A Dagstart briefing referencing a mail is fine, ghost-writing a reply is not.
+- Linking inbox items to today's agenda items — real value, but a genuine cross-source correlation the orchestrator itself would have to do (neither sub-skill has both datasets). Not built yet; flagged here so it doesn't get silently forgotten, not assumed available.

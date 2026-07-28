@@ -7,7 +7,7 @@ description: The Dagstart moment — the ritual that opens the day, currently a 
 
 Read-only orchestrator (autonomy level 1): gathers output from sub-skills, does not interpret on their behalf, and never creates/modifies/declines anything itself. Ends in proposals, never actions — same rule as every sub-skill it calls.
 
-Story B3. Deliberately thin for now: only the Agenda slot is connected. Every other slot is a placeholder that says so explicitly rather than being silently skipped — see the table below and `sections/`.
+Story C3 (Agenda since B3, Inbox since C3). Still deliberately thin: only Agenda and Inbox are connected. Every other slot is a placeholder that says so explicitly rather than being silently skipped — see the table below and `sections/`.
 
 ## Design principle
 
@@ -26,7 +26,7 @@ Each slot below is either **actief** (a real sub-skill exists and gets called) o
 | Slot | Sub-skill file | Status | Unlocked by |
 |---|---|---|---|
 | Agenda | `sections/agenda.md` | **actief** | already exists — B2 (`agenda-briefing`) |
-| Inbox | `sections/inbox.md` | nog niet gekoppeld | C3 (triage in de Dagstart) |
+| Inbox | `sections/inbox.md` | **actief** | already exists — C2 (`email-triage`), wired here by C3 |
 | Taken | `sections/taken.md` | nog niet gekoppeld | G1 (Notion uitlezen) |
 | Contact-context | `sections/contact.md` | nog niet gekoppeld | blok H (briefings voorbereiden) + `personal/stakeholders.md` |
 | Extern | `sections/extern.md` | nog niet gekoppeld | catalogus #26 — nog geen story |
@@ -40,13 +40,15 @@ Short opening line that frames the moment — not a generic greeting, a signal t
 
 ## Step 2 — Call connected sub-skills
 
-For each slot marked **actief**, invoke that sub-skill (via the Skill tool where the sub-skill is itself a registered skill, e.g. `agenda-briefing`) and take its output as-is. Never reimplement a sub-skill's interpretation logic inside the orchestrator — if something is wrong with a slot's content, that is a bug in the sub-skill, not here.
+For each slot marked **actief**, invoke that sub-skill (via the Skill tool, e.g. `agenda-briefing`, `email-triage`) and take its output as-is. Never reimplement a sub-skill's interpretation logic inside the orchestrator — if something is wrong with a slot's content, that is a bug in the sub-skill, not here.
 
 For each slot marked **nog niet gekoppeld**, do not attempt to fill it and do not mention it in the output by default — an empty-placeholder line for every unbuilt slot would make the briefing worse than `agenda-briefing` alone, which the klaar-criterium explicitly rules out. Only name an unconnected slot if the user asks about that source directly (e.g. "wat staat er in mijn mail" while only Agenda is wired up) — then say plainly "Nog niet gekoppeld: <slot>", no invented content.
 
 ## Step 3 — Assemble
 
-Fixed presentation order for whichever slots are actief: Agenda → Contact-context → Inbox → Taken → Extern → Vooruitkijken. (Rationale: what's happening today, who's involved, what needs a response, what's outstanding, what's around it, what's coming — roughly the order a person would want to orient.) Today that order reduces to just Agenda.
+Fixed presentation order for whichever slots are actief: Agenda → Contact-context → Inbox → Taken → Extern → Vooruitkijken. (Rationale: what's happening today, who's involved, what needs a response, what's outstanding, what's around it, what's coming — roughly the order a person would want to orient.) Today that order reduces to Agenda → Inbox.
+
+If the combined output gets too long to stay scannable, shorten — this is explicitly the story where that's allowed (see plan §8, C3). Prefer shortening `email-triage`'s per-message summaries to one line each over dropping content outright; never silently drop a message or an agenda item to save space.
 
 ## Step 4 — Propose, never just report
 
