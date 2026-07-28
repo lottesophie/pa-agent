@@ -13,6 +13,7 @@ Read-only skill (autonomy level 1): gather, classify, and flag — never label, 
 2. Capability needed: mail read. Which server provides it: see `config/tools.md`. Do not reference any provider by name in your output.
 3. Which account(s) are in scope (zakelijk/privé, apart of samengevoegd): see `personal/preferences.md`.
 4. Known constraint (found during C1): the mail search tool's date/label filters (`newer_than`, `after`, `in:inbox`) are not reliable — don't trust the query to scope "since last run" or "today". Pull a reasonable batch and filter by each message's own `date` field yourself instead.
+5. Known constraint (found during first C2 run, 2026-07-28): `get_thread` intermittently fails with a permission error where `get_message` on the same message ID succeeds — if `get_thread` fails, retry the individual message(s) with `get_message` before giving up. Also, `labelIds` are not consistent between endpoints (`search_threads` showed a message as `INBOX`, `get_message` on the same message showed `TRASH`) — don't treat a single call's labels as ground truth for whether something is still actionable.
 
 ## Step 1 — Gather & normalize
 
