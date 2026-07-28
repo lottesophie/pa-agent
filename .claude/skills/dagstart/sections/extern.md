@@ -1,13 +1,13 @@
 # Extern slot — nog niet gekoppeld
 
-Unlocked by: **catalogus #26 (dagcontext-extern)** — nog geen story. Flagged as a new addition to the takencatalogus (§7) in `pa-agent-plan.md` on 2026-07-27 rather than pretending it was already covered. Do not build against this slot until it has its own capability-story (its own `tools.md` row) and content-story, same two-step pattern as every other capability in this repo (§8 rule 2: capability and content are separate stories).
+Unlocked by: **"dagcontext-extern" (weer/reisstoringen)** — sits in the takencatalogus in the backlog, no story number yet. Do not build against this slot until it has its own capability-story (its own `config/tools.md` row) and a separate content-story — capability and content are always two stories in this repo, never one.
 
 ## Intended scope (from the source brainstorm)
 
 - Weer.
 - Reisinfo (file/vertraging) relevant to today's physical-location appointments — this reads the Agenda slot's travel-time flags, it doesn't duplicate that logic.
 - Relevant news about work or today's conversation partners.
-- Birthdays/anniversaries of contacts — this one **is** already covered elsewhere: catalog item 16 ("Stakeholder-onderhoud — verjaardagen, mijlpalen, contactmomenten signaleren"). Don't build a second birthday-check here once #16 exists; this slot should call that, not reimplement it.
+- Birthdays/anniversaries of contacts — this one **is** already covered elsewhere: "stakeholder-onderhoud" in the takencatalogus (verjaardagen, mijlpalen, contactmomenten signaleren). Don't build a second birthday-check here once that exists; this slot should call it, not reimplement it.
 
 ## Not in this draft
 

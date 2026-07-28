@@ -1,11 +1,15 @@
-# Claude Code lokale state blijft privé; skills zijn de uitzondering — die zijn onderdeel van de productiseerbare agent-laag (zie planning/pa-agent-plan.md §6)
+# Claude Code lokale state blijft privé; skills zijn de uitzondering — die zijn onderdeel van de productiseerbare agent-laag (zie planning/pa-agent-plan.md, "Vaste beslissingen" 6)
 .claude/*
 !.claude/skills/
 
-# Persoonlijke context — groeit door gebruik, hoort niet in git (zie planning/pa-agent-plan.md §6)
+# Persoonlijke context — groeit door gebruik, hoort niet in git ("Vaste beslissingen" 6)
 personal/
 memory/
 config/
 
-# Projectplan — documenteert deze specifieke build, geen onderdeel van de herbruikbare agent-laag (zie §6)
-planning/pa-agent-plan.md
+# Projectdocumentatie (plan, gebouwd, backlog) — documenteert deze specifieke build,
+# geen onderdeel van de herbruikbare agent-laag ("Vaste beslissingen" 6)
+planning/
+
+# macOS
+.DS_Store

@@ -7,7 +7,7 @@ description: The Dagstart moment — the ritual that opens the day, currently a 
 
 Read-only orchestrator (autonomy level 1): gathers output from sub-skills, does not interpret on their behalf, and never creates/modifies/declines anything itself. Ends in proposals, never actions — same rule as every sub-skill it calls.
 
-Story C3 (Agenda since B3, Inbox since C3). Still deliberately thin: only Agenda and Inbox are connected. Every other slot is a placeholder that says so explicitly rather than being silently skipped — see the table below and `sections/`.
+Story pa-8 (Agenda since pa-5, Inbox since pa-8). Still deliberately thin: only Agenda and Inbox are connected. Every other slot is a placeholder that says so explicitly rather than being silently skipped — see the table below and `sections/`.
 
 ## Design principle
 
@@ -25,12 +25,12 @@ Each slot below is either **actief** (a real sub-skill exists and gets called) o
 
 | Slot | Sub-skill file | Status | Unlocked by |
 |---|---|---|---|
-| Agenda | `sections/agenda.md` | **actief** | already exists — B2 (`agenda-briefing`) |
-| Inbox | `sections/inbox.md` | **actief** | already exists — C2 (`email-triage`), wired here by C3 |
-| Taken | `sections/taken.md` | nog niet gekoppeld | G1 (Notion uitlezen) |
-| Contact-context | `sections/contact.md` | nog niet gekoppeld | blok H (briefings voorbereiden) + `personal/stakeholders.md` |
-| Extern | `sections/extern.md` | nog niet gekoppeld | catalogus #26 — nog geen story |
-| Vooruitkijken | `sections/vooruitkijken.md` | nog niet gekoppeld, maar lowest-effort — see note in section file | mostly reuses B2's existing 7-day outline window |
+| Agenda | `sections/agenda.md` | **actief** | already exists — pa-4 (`agenda-briefing`) |
+| Inbox | `sections/inbox.md` | **actief** | already exists — pa-7 (`email-triage`), wired here by pa-8 |
+| Taken | `sections/taken.md` | nog niet gekoppeld | G1 (Notion uitlezen, backlog) |
+| Contact-context | `sections/contact.md` | nog niet gekoppeld | "briefings voorbereiden" (takencatalogus, nog geen story) + `personal/stakeholders.md` |
+| Extern | `sections/extern.md` | nog niet gekoppeld | "dagcontext-extern" (takencatalogus, nog geen story) |
+| Vooruitkijken | `sections/vooruitkijken.md` | nog niet gekoppeld, maar lowest-effort — see note in section file | mostly reuses pa-4's existing 7-day outline window |
 
 See each file in `sections/` for what that sub-skill will do once it exists, and exactly which story unlocks it.
 
@@ -48,7 +48,7 @@ For each slot marked **nog niet gekoppeld**, do not attempt to fill it and do no
 
 Fixed presentation order for whichever slots are actief: Agenda → Contact-context → Inbox → Taken → Extern → Vooruitkijken. (Rationale: what's happening today, who's involved, what needs a response, what's outstanding, what's around it, what's coming — roughly the order a person would want to orient.) Today that order reduces to Agenda → Inbox.
 
-If the combined output gets too long to stay scannable, shorten — this is explicitly the story where that's allowed (see plan §8, C3). Prefer shortening `email-triage`'s per-message summaries to one line each over dropping content outright; never silently drop a message or an agenda item to save space.
+If the combined output gets too long to stay scannable, shorten — pa-8 explicitly allowed this. Prefer shortening `email-triage`'s per-message summaries to one line each over dropping content outright; never silently drop a message or an agenda item to save space.
 
 ## Step 4 — Propose, never just report
 
@@ -62,9 +62,9 @@ The briefing must end in concrete decision points the PA is waiting on ("wil je 
 
 ## Learning from corrections
 
-Same pattern as every other skill in this repo: a correction to the framing/opening/assembly logic (this file) is structural — fix it here directly. A correction to tone, phrasing, or what to open with is calibration — goes in `personal/dagstart.md`. Both happen immediately, the moment a correction occurs — no separate evaluation phase, no tracked log (see `planning/pa-agent-plan.md` §8 rules 3-4).
+Same pattern as every other skill in this repo: a correction to the framing/opening/assembly logic (this file) is structural — fix it here directly. A correction to tone, phrasing, or what to open with is calibration — goes in `personal/dagstart.md`. Both happen immediately, the moment a correction occurs — no separate evaluation phase, no tracked log. The git history of this file and of `personal/dagstart.md` is the log.
 
 ## Not in this skill
 
-- New entries in `tools.md` — this file connects nothing new.
+- New entries in `config/tools.md` — this file connects nothing new.
 - New interpretation logic for any source — that belongs to the source's own skill (e.g. agenda interpretation is `agenda-briefing`'s job, not this file's).

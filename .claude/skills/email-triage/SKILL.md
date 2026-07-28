@@ -12,8 +12,8 @@ Read-only skill (autonomy level 1): gather, classify, and flag — never label, 
 1. Read `personal/email-triage.md` (personal preferences for this skill). Treat "file doesn't exist" the same as "file is empty" — this is expected on a first run and is not an error. If it is empty, missing, or missing a topic, apply the defaults below and **state the assumption explicitly** in the output.
 2. Capability needed: mail read. Which server provides it: see `config/tools.md`. Do not reference any provider by name in your output.
 3. Which account(s) are in scope (business/personal, separate or combined): see `personal/preferences.md`.
-4. Known constraint (found during C1): the mail search tool's date/label filters (`newer_than`, `after`, `in:inbox`) are not reliable — don't trust the query to scope "since last run" or "today". Pull a reasonable batch and filter by each message's own `date` field yourself instead.
-5. Known constraint (found during first C2 run, 2026-07-28): `get_thread` intermittently fails with a permission error where `get_message` on the same message ID succeeds — if `get_thread` fails, retry the individual message(s) with `get_message` before giving up. Also, `labelIds` are not consistent between endpoints (`search_threads` showed a message as `INBOX`, `get_message` on the same message showed `TRASH`) — don't treat a single call's labels as ground truth for whether something is still actionable.
+4. Known constraint (found during pa-6): the mail search tool's date/label filters (`newer_than`, `after`, `in:inbox`) are not reliable — don't trust the query to scope "since last run" or "today". Pull a reasonable batch and filter by each message's own `date` field yourself instead.
+5. Known constraint (found during first pa-7 run, 2026-07-28): `get_thread` intermittently fails with a permission error where `get_message` on the same message ID succeeds — if `get_thread` fails, retry the individual message(s) with `get_message` before giving up. Also, `labelIds` are not consistent between endpoints (`search_threads` showed a message as `INBOX`, `get_message` on the same message showed `TRASH`) — don't treat a single call's labels as ground truth for whether something is still actionable.
 
 ## Step 1 — Gather & normalize
 
@@ -40,11 +40,11 @@ Read-only skill (autonomy level 1): gather, classify, and flag — never label, 
 
 ## Step 5 — Propose, never act
 
-- Structural actions — labeling, archiving, forwarding action items to a task list, flagging attachments for document handling — are **out of scope for this skill**. They belong to future stories (mail hygiene, block F for action items, attachment handling, mail escalation — see catalogue §7) and are gated behind D1 (the send/write blockade) regardless of which skill they end up in. This skill only classifies and presents; it never modifies the inbox.
+- Structural actions — labeling, archiving, forwarding action items to a task list, flagging attachments for document handling — are **out of scope for this skill**. They belong to future stories (mail-hygiëne, blok G for action items, bijlagenbeheer, mail-escalatie — see the backlog) and are gated behind pa-12 (the send/write blockade) regardless of which skill they end up in. This skill only classifies and presents; it never modifies the inbox.
 - Phrase anything actionable as a question — confirm the classification with the user rather than asserting it, e.g. "I'd classify this as action-required/urgent — does that match?" — never as something already done.
-- For "ignorable" messages from a recurring/automated sender — not a newsletter the user deliberately follows (see `personal/email-triage.md`) — propose unsubscribing rather than silently repeating the classification every time, e.g. "Do you want to unsubscribe from this?" This is a suggestion only; actually unsubscribing is a structural action, out of scope here (mail hygiene, catalogue #27).
+- For "ignorable" messages from a recurring/automated sender — not a newsletter the user deliberately follows (see `personal/email-triage.md`) — propose unsubscribing rather than silently repeating the classification every time, e.g. "Do you want to unsubscribe from this?" This is a suggestion only; actually unsubscribing is a structural action, out of scope here (mail-hygiëne, backlog).
 
-Overlap note: this skill classifies within a single run; persisting that output so a future `email-briefing` skill (catalogus #28, no story yet) can summarize across runs is not built here — don't invent a log file for it ahead of that story.
+Overlap note: this skill classifies within a single run; persisting that output so a future mail-briefing skill (backlog, no story yet) can summarize across runs is not built here — don't invent a log file for it ahead of that story.
 
 ## Step 6 — Present
 
@@ -53,7 +53,7 @@ Overlap note: this skill classifies within a single run; persisting that output 
 - Output language and tone: follow `CLAUDE.md` (Dutch, informal "je"), not this file.
 - State every assumption made due to missing preferences at the bottom, briefly.
 
-Overlap note: a per-message content summary is part of this skill (it is what "for info" needs to actually mean). Aggregating or reporting across multiple runs/days is not — that is the future `email-briefing` skill (catalogus #28).
+Overlap note: a per-message content summary is part of this skill (it is what "for info" needs to actually mean). Aggregating or reporting across multiple runs/days is not — that is the future mail-briefing skill (backlog).
 
 ## Learning from corrections
 

@@ -1,6 +1,6 @@
 # Vooruitkijken slot — nog niet gekoppeld, maar lowest-effort
 
-Unlocked by: mostly nothing new. `agenda-briefing` (B2) already fetches "today + tomorrow in detail, rest of the coming 7 days as outline" (Step 1 — Gather). This slot is largely a second pass of interpretation over data the Agenda slot already has, not a new data source.
+Unlocked by: mostly nothing new. `agenda-briefing` (pa-4) already fetches "today + tomorrow in detail, rest of the coming 7 days as outline" (Step 1 — Gather). This slot is largely a second pass of interpretation over data the Agenda slot already has, not a new data source.
 
 ## Intended scope (from the source brainstorm)
 

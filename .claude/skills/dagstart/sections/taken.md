@@ -1,6 +1,6 @@
 # Taken slot — nog niet gekoppeld
 
-Unlocked by: **G1** (Notion uitlezen). Deepens with **G2** (`memory/open-loops.md`, context bij open lussen) and **G3** (toezeggingen najagen) once those land, but a first version only needs G1.
+Unlocked by: **G1** (Notion uitlezen, backlog). Deepens with **G2** (`memory/open-loops.md`, context bij open lussen) and **G3** (toezeggingen najagen) once those land, but a first version only needs G1.
 
 ## Intended scope (from the source brainstorm, for when G1 lands)
 
@@ -10,4 +10,4 @@ Unlocked by: **G1** (Notion uitlezen). Deepens with **G2** (`memory/open-loops.m
 
 ## Not in this draft
 
-Everything — this is a placeholder. No task-reading capability exists yet (`tools.md` has no Notion/tasks row).
+Everything — this is a placeholder. No task-reading capability exists yet (`config/tools.md` has no Notion/tasks row).
