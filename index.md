@@ -8,5 +8,6 @@ If `personal/`, `memory/`, or `config/` don't exist yet, this is a first run (e.
 - Preference questions (cross-skill: diet, meeting times, etc.) → `personal/preferences.md` (fills in over time, not pre-populated).
 - Calendar/agenda meaning (which calendar is personal/business/shared) → `personal/preferences.md`.
 - Agenda overview / briefing request ("what does my day/week look like") → skill `.claude/skills/agenda-briefing/SKILL.md`; its personal calibration lives in `personal/agenda-briefing.md` (fills in over time, not pre-populated). Pattern: each skill with its own personalization gets one line here pointing to its `personal/<skill-name>.md`.
+- Inbox triage request ("what's in my mail", "what needs a reply", "sort my inbox") → skill `.claude/skills/email-triage/SKILL.md`; its personal calibration lives in `personal/email-triage.md` (fills in over time, not pre-populated).
 - `tools.md` (root) is schema only. Actually connected capabilities + their filled-in row → `config/tools.md` (not git-tracked).
 - (Later stories) Daily Start → also `memory/handoff.md`, `memory/open-loops.md`.
