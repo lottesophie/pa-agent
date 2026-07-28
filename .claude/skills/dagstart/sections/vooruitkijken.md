@@ -9,7 +9,7 @@ Unlocked by: mostly nothing new. `agenda-briefing` (B2) already fetches "today +
 
 ## Open design question for whoever builds this (not decided now)
 
-Because this reuses Agenda-slot data rather than fetching anything new, it's worth asking at build time whether "vooruitkijken" should really be a **sixth sub-skill**, or whether it's better folded into `agenda-briefing` itself as a deeper read of the 7-day outline it already gathers — the "one skill = one source" rule (see orchestrator `SKILL.md`) argues for folding it in, since there's no separate source here, only a separate interpretation pass. Left open rather than pre-decided, since it doesn't block anything else in this draft.
+Because this reuses Agenda-slot data rather than fetching anything new, it's worth asking at build time whether "vooruitkijken" should really be a **sixth sub-skill**, or whether it's better folded into `agenda-briefing` itself as a deeper read of the 7-day outline it already gathers — the "one skill = one source" rule (see `dagstart`'s `SKILL.md`) argues for folding it in, since there's no separate source here, only a separate interpretation pass. Left open rather than pre-decided, since it doesn't block anything else.
 
 ## Not in this draft
 

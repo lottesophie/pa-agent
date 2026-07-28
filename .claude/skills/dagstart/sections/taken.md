@@ -1,8 +1,8 @@
 # Taken slot — nog niet gekoppeld
 
-Unlocked by: **F1** (Notion uitlezen). Deepens with **F2** (`memory/open-loops.md`, context bij open lussen) and **F3** (toezeggingen najagen) once those land, but a first version only needs F1.
+Unlocked by: **G1** (Notion uitlezen). Deepens with **G2** (`memory/open-loops.md`, context bij open lussen) and **G3** (toezeggingen najagen) once those land, but a first version only needs G1.
 
-## Intended scope (from the source brainstorm, for when F1 lands)
+## Intended scope (from the source brainstorm, for when G1 lands)
 
 - Open tasks from yesterday: carry over or drop — propose, never decide silently.
 - Deadlines today / this week.

@@ -1,6 +1,6 @@
 # Extern slot — nog niet gekoppeld
 
-Unlocked by: **nothing yet — this is a genuine gap in the roadmap**, not an existing story waiting to be sequenced. Flagged as a new addition to the takencatalogus (§7) in `pa-agent-plan.md` on 2026-07-27 rather than pretending it was already covered. Do not build against this slot until it has its own capability-story (its own `tools.md` row) and content-story, same two-step pattern as every other capability in this repo (§8 rule 2: capability and content are separate stories).
+Unlocked by: **catalogus #26 (dagcontext-extern)** — nog geen story. Flagged as a new addition to the takencatalogus (§7) in `pa-agent-plan.md` on 2026-07-27 rather than pretending it was already covered. Do not build against this slot until it has its own capability-story (its own `tools.md` row) and content-story, same two-step pattern as every other capability in this repo (§8 rule 2: capability and content are separate stories).
 
 ## Intended scope (from the source brainstorm)
 
