@@ -1,6 +1,6 @@
 ---
 name: dagstart
-description: The Dagstart moment — the ritual that opens the day, currently a thin wrapper around agenda-briefing with room for more sources to plug in later (inbox, tasks, contact context, external context, look-ahead), eventually a much bigger ritual than the agenda alone. Triggers on a plain "goedemorgen" (that greeting itself means "let's start the day", it's typically the first thing in a session) or an explicit "start mijn dagstart". A specific, narrow "hoe ziet mijn dag eruit" / "how does my day look" without the opening-the-day framing is agenda-briefing's trigger instead.
+description: The Dagstart moment — the ritual that opens the day, currently a thin wrapper around agenda-briefing with room for more sources to plug in later (inbox, tasks, contact context, external context, look-ahead), eventually a much bigger ritual than the agenda alone. Triggers only on an explicit "start mijn dagstart" (or "start dagstart") — not on a plain "goedemorgen", which is reserved for a different agent in this account and would otherwise collide. A specific, narrow "hoe ziet mijn dag eruit" / "how does my day look" is agenda-briefing's trigger instead.
 ---
 
 # Dagstart
