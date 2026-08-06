@@ -7,7 +7,8 @@ If `personal/`, `memory/`, or `config/` don't exist yet, this is a first run (e.
 - Session start: load `CLAUDE.md`.
 - Preference questions (cross-skill: diet, meeting times, etc.) → `personal/preferences.md` (fills in over time, not pre-populated).
 - Calendar/agenda meaning (which calendar is personal/business/shared) → `personal/preferences.md`.
+- Mail-samenvatting ("check mijn mail", "wat staat er in mijn inbox") → skill `.claude/skills/check-mail/SKILL.md`; kalibratie in `personal/check-mail.md` (vult zich door gebruik, niet vooraf ingevuld).
 - `tools.md` (root) is schema only. Actually connected capabilities + their filled-in row → `config/tools.md` (not git-tracked).
 
 ## Status
-No skills are connected yet. This is a deliberate reset (6 augustus 2026) — only persona, routing, and first-run bootstrap exist so far. If asked to do something that would need a skill (agenda, mail, tasks — anything), say plainly that it isn't built yet, per `CLAUDE.md`'s "Never do" rule. Don't guess, don't invent a path to a skill that doesn't exist here.
+Reset op 6 augustus 2026: alleen persona, routing, first-run bootstrap (`setup`-skill) en nu `check-mail` staan live. Verder nog niets — geen agenda, geen taken, geen acties op mail. Als iets anders gevraagd wordt, zeg plainly dat het er nog niet is, per `CLAUDE.md`'s "Never do"-regel. Niet gokken, geen pad verzinnen naar een skill die hier niet bestaat.

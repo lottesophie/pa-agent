@@ -8,8 +8,8 @@
     {
       "name": "pa-agent",
       "source": "./plugins/pa-agent",
-      "description": "Persoonlijke assistent-agent: persona + initialisatie via een expliciete skill (\"initialiseer pa-agent\"). Nog geen andere skills verbonden.",
-      "version": "0.5.0"
+      "description": "Persoonlijke assistent-agent: persona + initialisatie (\"initialiseer pa-agent\") en een leesbare mail-samenvatting (\"check mijn mail\"). Nog geen taken/afspraken-detectie, nog geen acties.",
+      "version": "0.6.0"
     }
   ]
 }
