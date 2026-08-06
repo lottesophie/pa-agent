@@ -1,0 +1,15 @@
+{
+  "name": "pa-agent",
+  "description": "Persoonlijke assistent-agent — gatekeeper-persona, agenda-/mail-skills, groeit gradueel in autonomie.",
+  "owner": {
+    "name": "Lotte Jonkman"
+  },
+  "plugins": [
+    {
+      "name": "pa-agent",
+      "source": "./plugins/pa-agent",
+      "description": "Persoonlijke assistent-agent: persona + skills voor agenda, mail en (later) taken.",
+      "version": "0.1.0"
+    }
+  ]
+}

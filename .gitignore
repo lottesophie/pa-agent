@@ -1,6 +1,8 @@
 # Claude Code lokale state blijft privé; skills zijn de uitzondering — die zijn onderdeel van de productiseerbare agent-laag (zie planning/pa-agent-plan.md, "Vaste beslissingen" 6)
+# Geen trailing slash op de negatie: .claude/skills is een symlink naar plugins/pa-agent/skills
+# (de echte bestanden), en een map-only patroon (met /) matcht een symlink niet.
 .claude/*
-!.claude/skills/
+!.claude/skills
 
 # Persoonlijke context — groeit door gebruik, hoort niet in git ("Vaste beslissingen" 6)
 personal/
