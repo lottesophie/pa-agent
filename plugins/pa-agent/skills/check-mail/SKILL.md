@@ -1,11 +1,11 @@
 ---
 name: check-mail
-description: Lees de inbox en geef een korte, persoonlijk relevante samenvatting — geen volledige lijst, geen actie. Signaleert ook phishing/spoofing. Triggert op de expliciete zin "check mijn mail" (of een duidelijke variant zoals "wat staat er in mijn inbox"). Voert geen acties uit — niet archiveren, verwijderen, afmelden of replies opstellen; dat komt in latere skills.
+description: Lees de inbox en geef een korte, persoonlijk relevante samenvatting — geen volledige lijst, geen actie. Signaleert ook phishing/spoofing. Betrouwbare trigger: expliciet /check-mail aanroepen — natuurlijke taal ("check mijn mail") triggert deze skill niet betrouwbaar (bevestigd 6 augustus 2026: Claude gebruikt dan zelf de Gmail-tool zonder deze instructies te volgen). Voert geen acties uit — niet archiveren, verwijderen, afmelden of replies opstellen; dat komt in latere skills.
 ---
 
 # Check mail
 
-Trigger: "check mijn mail", "wat staat er in mijn inbox", of een duidelijke variant. Niet op een generieke groet.
+Trigger: roep expliciet `/check-mail` aan. Natuurlijke taal ("check mijn mail") is niet betrouwbaar gebleken (bevestigd 6 augustus 2026, zie `pa-agent-built.md`) — een taak die Claude toch al generiek kan (mail lezen met een tool), wordt niet automatisch naar deze skill doorgestuurd, ook niet bij de exacte triggerzin. Gebruik het schuine-streep-commando.
 
 Niveau: 1 (informeren/voorstellen) — dit is een leesskill, geen enkele actie.
 

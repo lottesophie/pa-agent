@@ -5,7 +5,7 @@ description: Initialiseer de PA in dit project — persona actief zetten en pers
 
 # PA-agent — initialisatie
 
-Trigger: uitsluitend een expliciete zin als "initialiseer pa-agent" of "zet mijn PA op". Niet op "hoi", "goedemorgen" of een andere generieke opener.
+Trigger: uitsluitend een expliciete zin als "initialiseer pa-agent" of "zet mijn PA op" — bevestigd werkend op natuurlijke taal (6 augustus 2026). `/setup` werkt ook, als gegarandeerd alternatief (zie `check-mail` voor een skill waar natuurlijke taal juist niét betrouwbaar bleek). Niet op "hoi", "goedemorgen" of een andere generieke opener.
 
 Dit vervangt een eerdere poging met een `SessionStart`-hook, die onbevestigd bleef in Cowork (geen zichtbaar effect, ook niet met een debug-versie zonder afhankelijkheden). Een expliciet getriggerde skill is een mechanisme dat al bevestigd werkt in Cowork — vandaar deze route, tot de hook-route (zie backlog, "Distributie") apart is uitgezocht.
 
