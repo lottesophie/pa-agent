@@ -8,8 +8,8 @@
     {
       "name": "pa-agent",
       "source": "./plugins/pa-agent",
-      "description": "Persoonlijke assistent-agent: persona + initialisatie (/setup) en een leesbare mail-samenvatting met taken-/afspraken-signalering (/check-mail). Nog geen acties.",
-      "version": "0.8.0"
+      "description": "Persoonlijke assistent-agent: persona + initialisatie (/setup), leesbare mail-samenvatting met taken-/afspraken-signalering (/check-mail), en conceptreplies klaarzetten (/draft-replies, niveau 2, verstuurt nooit).",
+      "version": "0.9.0"
     }
   ]
 }
